@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Consumer } from '../../context';
 
-import SixteenSteps from '../SixteenSteps';
+import SixteenSteps from '../sequencer/SixteenSteps';
 
 class CowbellRow extends Component {
   constructor() {
