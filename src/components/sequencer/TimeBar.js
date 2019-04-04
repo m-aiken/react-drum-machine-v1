@@ -3,7 +3,7 @@ import React from 'react';
 function TimeBar(props) {
   const { index } = props;
   return (
-    <th scope="col">
+    <React.Fragment>
       <div className={index + 1 !== 1 ? 'tb-box' : 'tb-box-active'} />
       <div className={index + 1 !== 2 ? 'tb-box' : 'tb-box-active'} />
       <div className={index + 1 !== 3 ? 'tb-box' : 'tb-box-active'} />
@@ -20,7 +20,7 @@ function TimeBar(props) {
       <div className={index + 1 !== 14 ? 'tb-box' : 'tb-box-active'} />
       <div className={index + 1 !== 15 ? 'tb-box' : 'tb-box-active'} />
       <div className={index + 1 !== 16 ? 'tb-box' : 'tb-box-active'} />
-    </th>
+    </React.Fragment>
   );
 }
 

@@ -3,18 +3,30 @@
 }
 
 .container {
-  max-width: 60vw;
+  max-width: 80vw;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
 }
 
 .transport {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  margin: 35px 50px 0 50px;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  margin: 25px 50px 0 50px;
   text-align: center;
+  font-weight: bold;
 }
 
 .transport button {
   margin: 0 8px;
+  font-weight: bold;
+  border: none;
+}
+
+input[type='range'] {
+  width: 90px;
 }
 
 /* Sequencer boxes */

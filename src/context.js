@@ -54,6 +54,56 @@ const reducer = (state, action) => {
         ...state,
         congaSteps: action.payload
       };
+    case 'UPDATE_KICK_NOTE':
+      return {
+        ...state,
+        kickNote: action.payload
+      };
+    case 'UPDATE_BOOM_NOTE':
+      return {
+        ...state,
+        boomNote: action.payload
+      };
+    case 'UPDATE_SNARE_NOTE':
+      return {
+        ...state,
+        snareNote: action.payload
+      };
+    case 'UPDATE_RIM_NOTE':
+      return {
+        ...state,
+        rimNote: action.payload
+      };
+    case 'UPDATE_CLHAT_NOTE':
+      return {
+        ...state,
+        clhatNote: action.payload
+      };
+    case 'UPDATE_OPHAT_NOTE':
+      return {
+        ...state,
+        ophatNote: action.payload
+      };
+    case 'UPDATE_COWBELL_NOTE':
+      return {
+        ...state,
+        cowbellNote: action.payload
+      };
+    case 'UPDATE_CLAVE_NOTE':
+      return {
+        ...state,
+        claveNote: action.payload
+      };
+    case 'UPDATE_MARACA_NOTE':
+      return {
+        ...state,
+        maracaNote: action.payload
+      };
+    case 'UPDATE_CONGA_NOTE':
+      return {
+        ...state,
+        congaNote: action.payload
+      };
     default:
       return state;
   }
@@ -81,6 +131,7 @@ export class Provider extends Component {
         { step: 15, checked: false },
         { step: 16, checked: false }
       ],
+      kickNote: 'C3',
       boomSteps: [
         { step: 1, checked: false },
         { step: 2, checked: false },
@@ -99,6 +150,7 @@ export class Provider extends Component {
         { step: 15, checked: false },
         { step: 16, checked: false }
       ],
+      boomNote: 'C3',
       snareSteps: [
         { step: 1, checked: false },
         { step: 2, checked: false },
@@ -117,6 +169,7 @@ export class Provider extends Component {
         { step: 15, checked: false },
         { step: 16, checked: false }
       ],
+      snareNote: 'C3',
       rimSteps: [
         { step: 1, checked: false },
         { step: 2, checked: false },
@@ -135,6 +188,7 @@ export class Provider extends Component {
         { step: 15, checked: false },
         { step: 16, checked: false }
       ],
+      rimNote: 'C3',
       clhatSteps: [
         { step: 1, checked: false },
         { step: 2, checked: false },
@@ -153,6 +207,7 @@ export class Provider extends Component {
         { step: 15, checked: false },
         { step: 16, checked: false }
       ],
+      clhatNote: 'C3',
       ophatSteps: [
         { step: 1, checked: false },
         { step: 2, checked: false },
@@ -171,6 +226,7 @@ export class Provider extends Component {
         { step: 15, checked: false },
         { step: 16, checked: false }
       ],
+      ophatNote: 'C3',
       cowbellSteps: [
         { step: 1, checked: false },
         { step: 2, checked: false },
@@ -189,6 +245,7 @@ export class Provider extends Component {
         { step: 15, checked: false },
         { step: 16, checked: false }
       ],
+      cowbellNote: 'C3',
       claveSteps: [
         { step: 1, checked: false },
         { step: 2, checked: false },
@@ -207,6 +264,7 @@ export class Provider extends Component {
         { step: 15, checked: false },
         { step: 16, checked: false }
       ],
+      claveNote: 'C3',
       maracaSteps: [
         { step: 1, checked: false },
         { step: 2, checked: false },
@@ -225,6 +283,7 @@ export class Provider extends Component {
         { step: 15, checked: false },
         { step: 16, checked: false }
       ],
+      maracaNote: 'C3',
       congaSteps: [
         { step: 1, checked: false },
         { step: 2, checked: false },
@@ -243,6 +302,7 @@ export class Provider extends Component {
         { step: 15, checked: false },
         { step: 16, checked: false }
       ],
+      congaNote: 'C3',
       dispatch: action => this.setState(state => reducer(state, action))
     };
   }

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import TimeBar from './TimeBar';
+
 import KickRow from '../instruments/KickRow';
 import BoomRow from '../instruments/BoomRow';
 import SnareRow from '../instruments/SnareRow';
@@ -11,20 +13,38 @@ import ClaveRow from '../instruments/ClaveRow';
 import MaracaRow from '../instruments/MaracaRow';
 import CongaRow from '../instruments/CongaRow';
 
-function Sequencer() {
+function Sequencer(props) {
   return (
-    <tbody>
-      <KickRow />
-      <BoomRow />
-      <SnareRow />
-      <RimRow />
-      <ClHatRow />
-      <OpHatRow />
-      <CowbellRow />
-      <ClaveRow />
-      <MaracaRow />
-      <CongaRow />
-    </tbody>
+    <div>
+      <table
+        className="table table-striped table-dark table-bordered table-sm"
+        style={{ textAlign: 'center' }}
+      >
+        <thead>
+          <tr>
+            <th />
+            <th>
+              <TimeBar index={props.index} />
+            </th>
+            <th>pitch</th>
+            <th>reVerb</th>
+            <th>VoluMe</th>
+          </tr>
+        </thead>
+        <tbody>
+          <KickRow />
+          <BoomRow />
+          <SnareRow />
+          <RimRow />
+          <ClHatRow />
+          <OpHatRow />
+          <CowbellRow />
+          <ClaveRow />
+          <MaracaRow />
+          <CongaRow />
+        </tbody>
+      </table>
+    </div>
   );
 }
 

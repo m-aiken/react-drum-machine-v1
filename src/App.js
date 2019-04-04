@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Provider } from './context';
 
-import AllInstruments from './components/AllInstruments';
+import Playback from './components/Playback';
 
 import './App.css';
 
@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <Provider>
         <div className="container">
-          <AllInstruments />
+          <Playback />
         </div>
       </Provider>
     );
