@@ -54,8 +54,8 @@ class Playback extends Component {
 
   // New version with Tone.Sampler
   samplerPlayback = (stateSteps, sampler, note) => {
-    stateSteps.map(item => {
-      if (item.step === this.state.index + 1 && item.checked === true) {
+    stateSteps.map((item, idx) => {
+      if (idx === this.state.index && item.checked === true) {
         sampler.triggerAttack(note);
       }
       return item;

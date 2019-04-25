@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class SingleStep extends Component {
   static propTypes = {
-    step: PropTypes.object.isRequired,
+    index: PropTypes.number.isRequired,
     updateChecked: PropTypes.func.isRequired
   };
 
@@ -15,11 +15,11 @@ class SingleStep extends Component {
   };
 
   render() {
-    const { step } = this.props.step;
+    const { index, updateChecked } = this.props;
     return (
       <input
         type="checkbox"
-        onChange={this.props.updateChecked.bind(this, step)}
+        onChange={updateChecked.bind(this, index)}
         style={this.style}
       />
     );

@@ -13,22 +13,22 @@ class BoomRow extends Component {
     super();
     this.state = {
       boomSteps: [
-        { step: 1, checked: false },
-        { step: 2, checked: false },
-        { step: 3, checked: false },
-        { step: 4, checked: false },
-        { step: 5, checked: false },
-        { step: 6, checked: false },
-        { step: 7, checked: false },
-        { step: 8, checked: false },
-        { step: 9, checked: false },
-        { step: 10, checked: false },
-        { step: 11, checked: false },
-        { step: 12, checked: false },
-        { step: 13, checked: false },
-        { step: 14, checked: false },
-        { step: 15, checked: false },
-        { step: 16, checked: false }
+        { checked: false },
+        { checked: false },
+        { checked: false },
+        { checked: false },
+        { checked: false },
+        { checked: false },
+        { checked: false },
+        { checked: false },
+        { checked: false },
+        { checked: false },
+        { checked: false },
+        { checked: false },
+        { checked: false },
+        { checked: false },
+        { checked: false },
+        { checked: false }
       ],
       sliderValue: 9,
       samplerNote: 'C3',
@@ -37,10 +37,10 @@ class BoomRow extends Component {
     };
   }
 
-  updateChecked = (dispatch, step) => {
+  updateChecked = (dispatch, stepIdx) => {
     this.setState({
-      boomSteps: this.state.boomSteps.map(item => {
-        if (item.step === step) {
+      boomSteps: this.state.boomSteps.map((item, stateIdx) => {
+        if (stateIdx === stepIdx) {
           item.checked = !item.checked;
         }
         return item;
