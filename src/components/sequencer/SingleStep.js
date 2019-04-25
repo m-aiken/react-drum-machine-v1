@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class SingleStep extends Component {
+  static propTypes = {
+    step: PropTypes.object.isRequired,
+    updateChecked: PropTypes.func.isRequired
+  };
+
   style = {
     height: '100%',
     width: '100%',

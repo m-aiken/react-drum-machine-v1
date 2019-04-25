@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function ReverbSlider(props) {
   return (
@@ -13,5 +14,10 @@ function ReverbSlider(props) {
     </React.Fragment>
   );
 }
+
+ReverbSlider.propTypes = {
+  value: PropTypes.number.isRequired,
+  changeReverb: PropTypes.func.isRequired
+};
 
 export default ReverbSlider;

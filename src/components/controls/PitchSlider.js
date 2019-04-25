@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function PitchSlider(props) {
   return (
@@ -13,5 +14,10 @@ function PitchSlider(props) {
     </React.Fragment>
   );
 }
+
+PitchSlider.propTypes = {
+  sliderValue: PropTypes.number.isRequired,
+  changePitch: PropTypes.func.isRequired
+};
 
 export default PitchSlider;

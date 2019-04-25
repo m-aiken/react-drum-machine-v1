@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function StartStopButton(props) {
   const style = {
@@ -13,5 +14,9 @@ function StartStopButton(props) {
     </React.Fragment>
   );
 }
+
+StartStopButton.propTypes = {
+  toggleSequencer: PropTypes.func.isRequired
+};
 
 export default StartStopButton;

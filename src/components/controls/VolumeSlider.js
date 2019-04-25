@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function VolumeSlider(props) {
   return (
@@ -13,5 +14,10 @@ function VolumeSlider(props) {
     </React.Fragment>
   );
 }
+
+VolumeSlider.propTypes = {
+  value: PropTypes.number.isRequired,
+  changeVolume: PropTypes.func.isRequired
+};
 
 export default VolumeSlider;

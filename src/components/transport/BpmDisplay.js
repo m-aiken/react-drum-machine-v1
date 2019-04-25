@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function BpmDisplay(props) {
   const { bpmValue, changeBpm } = props;
@@ -18,5 +19,10 @@ function BpmDisplay(props) {
     </React.Fragment>
   );
 }
+
+BpmDisplay.propTypes = {
+  bpmValue: PropTypes.number.isRequired,
+  changeBpm: PropTypes.func.isRequired
+};
 
 export default BpmDisplay;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function TimeBar(props) {
   const { index } = props;
@@ -23,5 +24,9 @@ function TimeBar(props) {
     </React.Fragment>
   );
 }
+
+TimeBar.propTypes = {
+  index: PropTypes.number.isRequired
+};
 
 export default TimeBar;

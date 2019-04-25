@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import TimeBar from './TimeBar';
 
@@ -47,5 +48,9 @@ function Sequencer(props) {
     </div>
   );
 }
+
+Sequencer.propTypes = {
+  index: PropTypes.number.isRequired
+};
 
 export default Sequencer;
