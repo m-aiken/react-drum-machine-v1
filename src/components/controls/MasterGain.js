@@ -20,13 +20,19 @@ class MasterGain extends Component {
   render() {
     return (
       <React.Fragment>
-        <th scole="row" style={{ textAlign: 'center' }}>
-          <p>master volume</p>
-          <VolumeSlider
-            value={this.state.volume}
-            changeVolume={this.changeVolume}
-          />
-        </th>
+        <table>
+          <tbody>
+            <tr>
+              <th scole="row" style={{ textAlign: 'center' }}>
+                <p>master volume</p>
+                <VolumeSlider
+                  value={this.state.volume}
+                  changeVolume={this.changeVolume}
+                />
+              </th>
+            </tr>
+          </tbody>
+        </table>
       </React.Fragment>
     );
   }
