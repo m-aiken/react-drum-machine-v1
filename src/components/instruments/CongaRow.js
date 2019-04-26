@@ -30,7 +30,7 @@ class CongaRow extends Component {
         { checked: false },
         { checked: false }
       ],
-      sliderValue: 9,
+      pitchSliderValue: '9',
       samplerNote: 'C3',
       reverb: '0',
       volume: '100'
@@ -54,7 +54,7 @@ class CongaRow extends Component {
 
   changePitch = (dispatch, event) => {
     const { value } = event.target;
-    this.setState({ sliderValue: value }, () => {
+    this.setState({ pitchSliderValue: value }, () => {
       this.setState({ samplerNote: noteRange[value - 1] });
     });
     dispatch({
@@ -93,7 +93,7 @@ class CongaRow extends Component {
               </td>
               <td>
                 <PitchSlider
-                  sliderValue={this.state.sliderValue}
+                  value={this.state.pitchSliderValue}
                   changePitch={this.changePitch.bind(this, dispatch)}
                   note={this.state.note}
                 />

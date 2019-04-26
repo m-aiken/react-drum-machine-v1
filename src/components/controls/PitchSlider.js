@@ -8,7 +8,7 @@ function PitchSlider(props) {
         type="range"
         min="1"
         max="17"
-        value={props.sliderValue}
+        value={props.value}
         onChange={props.changePitch}
       />
     </React.Fragment>
@@ -16,7 +16,7 @@ function PitchSlider(props) {
 }
 
 PitchSlider.propTypes = {
-  sliderValue: PropTypes.number.isRequired,
+  value: PropTypes.string.isRequired,
   changePitch: PropTypes.func.isRequired
 };
 
