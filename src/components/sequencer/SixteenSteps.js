@@ -5,12 +5,11 @@ import SingleStep from './SingleStep';
 
 function SixteenSteps(props) {
   return props.steps.map((step, stepIdx) => (
-    <div className={step.checked === false ? 'seq-box' : 'seq-box-active'}>
-      <SingleStep
-        key={stepIdx}
-        index={stepIdx}
-        updateChecked={props.updateChecked}
-      />
+    <div
+      className={step.checked === false ? 'seq-box' : 'seq-box-active'}
+      key={stepIdx}
+    >
+      <SingleStep index={stepIdx} updateChecked={props.updateChecked} />
     </div>
   ));
 }
