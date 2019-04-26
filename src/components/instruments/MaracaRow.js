@@ -32,8 +32,8 @@ class MaracaRow extends Component {
       ],
       sliderValue: 9,
       samplerNote: 'C3',
-      reverb: 0,
-      volume: 100
+      reverb: '0',
+      volume: '100'
     };
   }
 

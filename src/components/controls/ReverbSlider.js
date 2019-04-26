@@ -16,7 +16,7 @@ function ReverbSlider(props) {
 }
 
 ReverbSlider.propTypes = {
-  value: PropTypes.number.isRequired,
+  value: PropTypes.string.isRequired,
   changeReverb: PropTypes.func.isRequired
 };
 

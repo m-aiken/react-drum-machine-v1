@@ -16,7 +16,7 @@ function VolumeSlider(props) {
 }
 
 VolumeSlider.propTypes = {
-  value: PropTypes.number.isRequired,
+  value: PropTypes.string.isRequired,
   changeVolume: PropTypes.func.isRequired
 };
 

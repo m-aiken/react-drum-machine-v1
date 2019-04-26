@@ -6,7 +6,7 @@ class MasterGain extends Component {
   constructor() {
     super();
     this.state = {
-      volume: 100
+      volume: '100'
     };
   }
 
