@@ -1,9 +1,33 @@
-* {
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
   font-family: 'Major Mono Display', monospace;
 }
 
+html {
+  box-sizing: border-box;
+}
+
 .container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .container {
   max-width: 80vw;
+} */
+
+.modalButton {
+  padding: 2rem !important;
+  font-size: 2rem !important;
+  margin: 2rem;
+  border-radius: 0 !important;
 }
 
 .header {
@@ -23,6 +47,7 @@
   margin: 0 8px;
   font-weight: bold;
   border: none;
+  outline: none !important;
 }
 
 input[type='range'] {
@@ -67,69 +92,4 @@ input[type='range'] {
   position: relative;
   display: inline-block;
   background: #5dfc0a;
-}
-
-/* iPad */
-@media (max-width: 1200px) {
-  .container {
-    max-width: 100vw;
-    margin: 0;
-  }
-
-  /* Sequencer boxes */
-  .seq-box {
-    height: 39px;
-    width: 50px;
-  }
-
-  .seq-box-active {
-    height: 39px;
-    width: 50px;
-  }
-
-  /* Timebar boxes */
-  .tb-box {
-    height: 15px;
-    width: 50px;
-  }
-
-  .tb-box-active {
-    height: 15px;
-    width: 50px;
-  }
-}
-
-/* iPhone 6/7/8 */
-@media (max-width: 800px) {
-  .container {
-    max-width: 100vw;
-    margin: 0;
-  }
-
-  .transport {
-    margin: 15px 50px -10px 50px;
-    text-align: center;
-  }
-
-  /* Sequencer boxes */
-  .seq-box {
-    height: 27px;
-    width: 27px;
-  }
-
-  .seq-box-active {
-    height: 27px;
-    width: 27px;
-  }
-
-  /* Timebar boxes */
-  .tb-box {
-    height: 10px;
-    width: 27px;
-  }
-
-  .tb-box-active {
-    height: 10px;
-    width: 27px;
-  }
 }
