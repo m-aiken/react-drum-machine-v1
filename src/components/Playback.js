@@ -72,8 +72,8 @@ class Playback extends Component {
   render() {
     return (
       <div>
-        <div className="jumbotron jumbotro-fluid mt-4 mb-0 py-4 bg-dark text-light">
-          <div className="container">
+        <div className="jumbotron jumbotro-fluid mb-0 py-4 bg-dark text-light">
+          <div>
             <Header />
             <Transport
               toggleSequencer={() => Tone.Transport.toggle()}
