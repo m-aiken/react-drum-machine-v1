@@ -4,14 +4,19 @@ import PropTypes from 'prop-types';
 import SingleStep from './SingleStep';
 
 function SixteenSteps(props) {
-  return props.steps.map((step, stepIdx) => (
-    <div
-      className={step.checked === false ? 'seq-box' : 'seq-box-active'}
-      key={stepIdx}
-    >
-      <SingleStep index={stepIdx} updateChecked={props.updateChecked} />
+  return (
+    <div className="sixteen-steps">
+      {props.steps.map((step, stepIdx) => (
+        <div
+          className="seq-box"
+          key={stepIdx}
+          style={step.checked ? { background: '#fd2c08' } : { background: '' }}
+        >
+          <SingleStep index={stepIdx} updateChecked={props.updateChecked} />
+        </div>
+      ))}
     </div>
-  ));
+  );
 }
 
 SixteenSteps.propTypes = {

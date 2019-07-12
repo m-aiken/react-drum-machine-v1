@@ -16,35 +16,24 @@ import CongaRow from '../instruments/CongaRow';
 
 function Sequencer(props) {
   return (
-    <div>
-      <table
-        className="table table-striped table-dark table-bordered table-sm"
-        style={{ textAlign: 'center' }}
-      >
-        <thead>
-          <tr>
-            <th />
-            <th>
-              <TimeBar index={props.index} />
-            </th>
-            <th>pitch</th>
-            <th>reVerb</th>
-            <th>VoluMe</th>
-          </tr>
-        </thead>
-        <tbody>
-          <KickRow />
-          <BoomRow />
-          <SnareRow />
-          <RimRow />
-          <ClHatRow />
-          <OpHatRow />
-          <CowbellRow />
-          <ClaveRow />
-          <MaracaRow />
-          <CongaRow />
-        </tbody>
-      </table>
+    <div className="sequencer">
+      <div className="sequencer-row">
+        <div />
+        <TimeBar index={props.index} />
+        <div className="sliderName">pitch</div>
+        <div className="sliderName">reVerb</div>
+        <div className="sliderName">VoluMe</div>
+      </div>
+      <KickRow />
+      <BoomRow />
+      <SnareRow />
+      <RimRow />
+      <ClHatRow />
+      <OpHatRow />
+      <CowbellRow />
+      <ClaveRow />
+      <MaracaRow />
+      <CongaRow />
     </div>
   );
 }

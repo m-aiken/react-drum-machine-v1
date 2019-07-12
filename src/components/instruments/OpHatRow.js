@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Consumer } from '../../context';
 
+import InstrumentTitle from '../sequencer/InstrumentTitle';
 import SixteenSteps from '../sequencer/SixteenSteps';
 import { noteRange } from '../controls/NoteRange';
 import PitchSlider from '../controls/PitchSlider';
@@ -83,34 +84,26 @@ class OpHatRow extends Component {
         {value => {
           const { dispatch } = value;
           return (
-            <tr>
-              <th scope="row">OpeN hi-hAt</th>
-              <td>
-                <SixteenSteps
-                  steps={this.state.ophatSteps}
-                  updateChecked={this.updateChecked.bind(this, dispatch)}
-                />
-              </td>
-              <td>
-                <PitchSlider
-                  value={this.state.pitchSliderValue}
-                  changePitch={this.changePitch.bind(this, dispatch)}
-                  note={this.state.note}
-                />
-              </td>
-              <td>
-                <ReverbSlider
-                  value={this.state.reverb}
-                  changeReverb={this.changeReverb}
-                />
-              </td>
-              <td>
-                <VolumeSlider
-                  value={this.state.volume}
-                  changeVolume={this.changeVolume}
-                />
-              </td>
-            </tr>
+            <div className="sequencer-row">
+              <InstrumentTitle name="OpeN hi-hAt" />
+              <SixteenSteps
+                steps={this.state.ophatSteps}
+                updateChecked={this.updateChecked.bind(this, dispatch)}
+              />
+              <PitchSlider
+                value={this.state.pitchSliderValue}
+                changePitch={this.changePitch.bind(this, dispatch)}
+                note={this.state.note}
+              />
+              <ReverbSlider
+                value={this.state.reverb}
+                changeReverb={this.changeReverb}
+              />
+              <VolumeSlider
+                value={this.state.volume}
+                changeVolume={this.changeVolume}
+              />
+            </div>
           );
         }}
       </Consumer>

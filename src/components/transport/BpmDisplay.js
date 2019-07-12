@@ -3,17 +3,14 @@ import PropTypes from 'prop-types';
 
 function BpmDisplay(props) {
   const { bpmValue, changeBpm } = props;
-  const style = {
-    background: '#ffc600',
-    color: 'black'
-  };
+
   return (
     <React.Fragment>
-      bpm: {bpmValue}
-      <button name="up" onClick={changeBpm} style={style}>
+      <div className="bpm-value">bpm: {bpmValue}</div>
+      <button name="up" onClick={changeBpm} className="bpm-button">
         bpm up
       </button>
-      <button name="down" onClick={changeBpm} style={style}>
+      <button name="down" onClick={changeBpm} className="bpm-button">
         bpm doWn
       </button>
     </React.Fragment>

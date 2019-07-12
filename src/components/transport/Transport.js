@@ -7,9 +7,11 @@ import BpmDisplay from './BpmDisplay';
 function Transport(props) {
   const { toggleSequencer, bpmValue, changeBpm } = props;
   return (
-    <div className="transport">
-      <StartStopButton toggleSequencer={toggleSequencer} />
-      <BpmDisplay bpmValue={bpmValue} changeBpm={changeBpm} />
+    <div className="transport-container">
+      <div className="transport">
+        <StartStopButton toggleSequencer={toggleSequencer} />
+        <BpmDisplay bpmValue={bpmValue} changeBpm={changeBpm} />
+      </div>
     </div>
   );
 }

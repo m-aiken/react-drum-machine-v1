@@ -7,20 +7,13 @@ class SingleStep extends Component {
     updateChecked: PropTypes.func.isRequired
   };
 
-  style = {
-    height: '100%',
-    width: '100%',
-    margin: '0',
-    opacity: '0'
-  };
-
   render() {
     const { index, updateChecked } = this.props;
     return (
       <input
         type="checkbox"
+        className="single-step"
         onChange={updateChecked.bind(this, index)}
-        style={this.style}
       />
     );
   }
