@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function PitchSlider(props) {
   return (
-    <React.Fragment>
+    <div className="slider">
       <input
         type="range"
         min="1"
@@ -11,7 +11,7 @@ function PitchSlider(props) {
         value={props.value}
         onChange={props.changePitch}
       />
-    </React.Fragment>
+    </div>
   );
 }
 

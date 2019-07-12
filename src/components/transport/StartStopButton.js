@@ -2,13 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function StartStopButton(props) {
-  const style = {
-    background: '#fd2c08',
-    color: 'white'
-  };
   return (
     <React.Fragment>
-      <button onClick={props.toggleSequencer} style={style}>
+      <button onClick={props.toggleSequencer} className="start-stop-button">
         stArt / stop
       </button>
     </React.Fragment>

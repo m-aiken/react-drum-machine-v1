@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function ReverbSlider(props) {
   return (
-    <React.Fragment>
+    <div className="slider">
       <input
         type="range"
         min="0"
@@ -11,7 +11,7 @@ function ReverbSlider(props) {
         value={props.value}
         onChange={props.changeReverb}
       />
-    </React.Fragment>
+    </div>
   );
 }
 

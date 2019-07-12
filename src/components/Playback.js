@@ -71,19 +71,17 @@ class Playback extends Component {
 
   render() {
     return (
-      <div>
-        <div className="jumbotron jumbotro-fluid mb-0 py-4 bg-dark text-light">
-          <div>
-            <Header />
-            <Transport
-              toggleSequencer={() => Tone.Transport.toggle()}
-              bpmValue={this.state.bpm}
-              changeBpm={this.changeBpm}
-            />
-          </div>
+      <React.Fragment>
+        <div className="header-and-transport">
+          <Header />
+          <Transport
+            toggleSequencer={() => Tone.Transport.toggle()}
+            bpmValue={this.state.bpm}
+            changeBpm={this.changeBpm}
+          />
         </div>
         <Sequencer index={this.state.index} />
-      </div>
+      </React.Fragment>
     );
   }
 }

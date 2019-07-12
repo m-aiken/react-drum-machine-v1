@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function VolumeSlider(props) {
   return (
-    <React.Fragment>
+    <div className="slider">
       <input
         type="range"
         min="0"
@@ -11,7 +11,7 @@ function VolumeSlider(props) {
         value={props.value}
         onChange={props.changeVolume}
       />
-    </React.Fragment>
+    </div>
   );
 }
 

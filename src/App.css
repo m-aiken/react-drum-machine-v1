@@ -11,17 +11,14 @@ html {
   box-sizing: border-box;
 }
 
-.container {
+.projectContainer {
   height: 100vh;
   width: 100vw;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-
-/* .container {
-  max-width: 80vw;
-} */
 
 .modalButton {
   padding: 2rem !important;
@@ -30,66 +27,174 @@ html {
   border-radius: 0 !important;
 }
 
+.header-and-transport {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #343a40;
+  color: white;
+}
+
+.header-container {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .header {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
 }
 
+.header h1 {
+  margin: 0;
+  font-size: 3rem;
+  justify-self: center;
+}
+
+.transport-container {
+  width: 75%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .transport {
+  width: 100%;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
-  margin: 25px 50px 0 50px;
   text-align: center;
   font-weight: bold;
 }
 
 .transport button {
-  margin: 0 8px;
+  margin: 0 1rem;
+  padding: 0.5rem 0;
   font-weight: bold;
   border: none;
   outline: none !important;
 }
 
+.start-stop-button {
+  background: #fd2c08;
+  color: white;
+}
+
+.bpm-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.bpm-button {
+  background: #ffc600;
+  color: black;
+}
+
+.sequencer {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #343a40;
+  color: white;
+}
+
+.sequencer-row {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 3fr 5fr 1fr 1fr 1fr;
+  margin: 0.2rem 0;
+}
+
+.sequencer-row > div {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sequencer-row > div:first-child {
+  border-left: none;
+}
+
+.sequencer-row:nth-child(even) {
+  background-color: #434a52;
+}
+
+.sixteen-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instrument-title {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sliderName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 input[type='range'] {
-  width: 90px;
+  width: 8rem;
 }
 
 /* Sequencer boxes */
 .seq-box {
-  height: 30px;
-  width: 30px;
+  height: 3rem;
+  width: 3rem;
   border: 1px #d3d3d3 solid;
+  border-right: none;
   padding: 0;
   position: relative;
-  display: inline-block;
 }
 
-.seq-box-active {
-  height: 30px;
-  width: 30px;
-  border: 1px #d3d3d3 solid;
-  padding: 0;
-  position: relative;
-  display: inline-block;
-  background: #fd2c08;
+.seq-box:last-child {
+  border-right: 1px #d3d3d3 solid;
+}
+
+.single-step {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  opacity: 0;
+}
+
+.timebar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Timebar boxes */
 .tb-box {
-  height: 12px;
-  width: 30px;
+  height: 1rem;
+  width: 3rem;
   border: 1px #d3d3d3 solid;
+  border-right: none;
   padding: 0;
   position: relative;
-  display: inline-block;
 }
 
-.tb-box-active {
-  height: 12px;
-  width: 30px;
-  border: 1px #d3d3d3 solid;
-  padding: 0;
-  position: relative;
-  display: inline-block;
-  background: #5dfc0a;
+.tb-box:last-child {
+  border-right: 1px #d3d3d3 solid;
 }

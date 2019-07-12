@@ -1,27 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+const matchers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
 function TimeBar(props) {
-  const { index } = props;
   return (
-    <React.Fragment>
-      <div className={index + 1 !== 1 ? 'tb-box' : 'tb-box-active'} />
-      <div className={index + 1 !== 2 ? 'tb-box' : 'tb-box-active'} />
-      <div className={index + 1 !== 3 ? 'tb-box' : 'tb-box-active'} />
-      <div className={index + 1 !== 4 ? 'tb-box' : 'tb-box-active'} />
-      <div className={index + 1 !== 5 ? 'tb-box' : 'tb-box-active'} />
-      <div className={index + 1 !== 6 ? 'tb-box' : 'tb-box-active'} />
-      <div className={index + 1 !== 7 ? 'tb-box' : 'tb-box-active'} />
-      <div className={index + 1 !== 8 ? 'tb-box' : 'tb-box-active'} />
-      <div className={index + 1 !== 9 ? 'tb-box' : 'tb-box-active'} />
-      <div className={index + 1 !== 10 ? 'tb-box' : 'tb-box-active'} />
-      <div className={index + 1 !== 11 ? 'tb-box' : 'tb-box-active'} />
-      <div className={index + 1 !== 12 ? 'tb-box' : 'tb-box-active'} />
-      <div className={index + 1 !== 13 ? 'tb-box' : 'tb-box-active'} />
-      <div className={index + 1 !== 14 ? 'tb-box' : 'tb-box-active'} />
-      <div className={index + 1 !== 15 ? 'tb-box' : 'tb-box-active'} />
-      <div className={index + 1 !== 16 ? 'tb-box' : 'tb-box-active'} />
-    </React.Fragment>
+    <div className="timebar">
+      {matchers.map(matcher => {
+        return (
+          <div
+            key={matcher}
+            className="tb-box"
+            style={
+              props.index === matcher
+                ? { background: '#5dfc0a' }
+                : { background: '' }
+            }
+          />
+        );
+      })}
+    </div>
   );
 }
 
