@@ -6,6 +6,8 @@ import StartModal from './components/StartModal';
 import Playback from './components/Playback';
 
 import './App.css';
+import './css/headerTransport.css';
+import './css/sequencer.css';
 
 let audioCtx;
 
@@ -29,7 +31,7 @@ class App extends Component {
   render() {
     return (
       <Provider>
-        <div className="projectContainer">
+        <div className="project-container">
           <StartModal
             modalStatus={this.state.modal}
             closeModal={this.closeModal}

@@ -19,12 +19,14 @@ class MasterGain extends Component {
 
   render() {
     return (
-      <div style={{ textAlign: 'center' }}>
+      <div className="master-vol-container">
         <p>master volume</p>
-        <VolumeSlider
-          value={this.state.volume}
-          changeVolume={this.changeVolume}
-        />
+        <div className="master-vol-slider-container">
+          <VolumeSlider
+            value={this.state.volume}
+            changeVolume={this.changeVolume}
+          />
+        </div>
       </div>
     );
   }
