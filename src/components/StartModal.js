@@ -9,7 +9,7 @@ const StartModal = props => {
         <Button
           color="primary"
           onClick={props.closeModal}
-          className="modalButton"
+          className="modal-button"
         >
           CLICk To START
         </Button>
