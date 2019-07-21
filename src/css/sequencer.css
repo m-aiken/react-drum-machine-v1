@@ -1,27 +1,18 @@
 .sequencer {
   width: 100%;
-  height: 60%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   background-color: #343a40;
   color: white;
 }
 
 .sequencer-row {
   width: 95%;
-  display: grid;
-  grid-template-columns: 1fr 6fr;
-  margin: 0.2rem 0;
-}
-
-.sequencer-row > div {
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.sequencer-row > div:first-child {
-  border-left: none;
+  height: 8%;
+  position: relative;
 }
 
 .sequencer-row:nth-child(even) {
@@ -29,35 +20,40 @@
 }
 
 .sixteen-steps {
+  position: absolute;
+  width: 85%;
+  height: 100%;
+  left: 15%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .instrument-title {
+  position: absolute;
+  height: 100%;
+  width: 15%;
   font-size: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.slider-name,
-.slider {
+.slider-container {
+  display: none;
+}
+
+.slider-name {
   display: none;
 }
 
 /* Sequencer boxes */
 .seq-box {
-  height: 1.6rem;
-  width: 6.25%;
-  border: 1px #d3d3d3 solid;
-  border-right: none;
+  height: 48%;
+  width: 12.5%;
+  border: 0.5px #d3d3d3 solid;
   padding: 0;
-  position: relative;
-}
-
-.seq-box:last-child {
-  border-right: 1px #d3d3d3 solid;
 }
 
 .single-step {
@@ -68,58 +64,87 @@
 }
 
 .timebar {
+  position: absolute;
+  width: 85%;
+  height: 100%;
+  left: 15%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* Timebar boxes */
 .tb-box {
-  height: 0.6rem;
-  width: 6.25%;
-  border: 1px #d3d3d3 solid;
-  border-right: none;
+  height: 17%;
+  width: 12.5%;
+  border: 0.5px #d3d3d3 solid;
   padding: 0;
   position: relative;
 }
 
-.tb-box:last-child {
-  border-right: 1px #d3d3d3 solid;
-}
-
 @media (min-width: 650px) {
+  .sequencer {
+    height: 70%;
+  }
+
+  .sixteen-steps {
+    flex-wrap: nowrap;
+  }
+
   .instrument-title {
     font-size: 0.7rem;
   }
 
   .seq-box {
-    height: 2.1rem;
-  }
-}
-
-@media (min-width: 850px) {
-  .sequencer {
-    height: 75%;
+    height: 100%;
+    width: 6.25%;
+    border: 1px #d3d3d3 solid;
+    border-right: none;
   }
 
-  .seq-box {
-    height: 2.7rem;
+  .seq-box:last-child {
+    border-right: 1px #d3d3d3 solid;
+  }
+
+  .timebar {
+    flex-wrap: nowrap;
   }
 
   .tb-box {
-    height: 0.7rem;
+    height: 25%;
+    width: 6.25%;
+    border: 1px #d3d3d3 solid;
+    border-right: none;
+  }
+
+  .tb-box:last-child {
+    border-right: 1px #d3d3d3 solid;
   }
 }
 
 @media (min-width: 1000px) {
-  .sequencer-row {
-    display: grid;
-    grid-template-columns: 1.4fr 6fr 1fr 1fr 1fr;
-    margin: 0.2rem 0;
+  .sequencer {
+    height: 75%;
+  }
+
+  .sixteen-steps {
+    width: 50%;
+    left: 15%;
   }
 
   .instrument-title {
     font-size: 0.8rem;
+  }
+
+  .slider-container {
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
 
   .slider-name {
@@ -138,33 +163,44 @@
   input[type='range'] {
     width: 85%;
   }
+
+  .timebar {
+    width: 50%;
+    left: 15%;
+  }
 }
 
 @media (min-width: 1500px) {
   .sequencer-row {
     width: 90%;
-    grid-template-columns: 1.4fr 6fr 1.2fr 1.2fr 1.2fr;
-  }
-
-  input[type='range'] {
-    width: 80%;
   }
 }
 
 @media (min-width: 1700px) {
+  .sixteen-steps {
+    width: 53%;
+    left: 17%;
+  }
   .instrument-title {
+    width: 17%;
     font-size: 1rem;
+  }
+
+  .slider-container {
+    width: 30%;
+    right: 0;
   }
 
   .slider-name {
     font-size: 1rem;
   }
 
-  .seq-box {
-    height: 3.3rem;
+  input[type='range'] {
+    width: 90%;
   }
 
-  .tb-box {
-    height: 0.8rem;
+  .timebar {
+    width: 53%;
+    left: 17%;
   }
 }

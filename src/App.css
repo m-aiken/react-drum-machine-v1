@@ -20,9 +20,15 @@ html {
   justify-content: center;
 }
 
+.modal-container {
+  width: 70vw !important;
+  margin: 0 auto !important;
+}
+
 .modal-button {
-  padding: 2rem !important;
-  font-size: 2rem !important;
-  margin: 2rem;
+  width: 90%;
+  padding: 2rem 0.5rem !important;
+  font-size: 1.5rem !important;
+  margin: 5%;
   border-radius: 0 !important;
 }
