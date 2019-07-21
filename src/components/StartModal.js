@@ -4,7 +4,7 @@ import { Button, Modal, ModalBody } from 'reactstrap';
 
 const StartModal = props => {
   return (
-    <Modal isOpen={props.modalStatus} centered>
+    <Modal isOpen={props.modalStatus} centered className="modal-container">
       <ModalBody>
         <Button
           color="primary"

@@ -90,19 +90,21 @@ class RimRow extends Component {
                 steps={this.state.rimSteps}
                 updateChecked={this.updateChecked.bind(this, dispatch)}
               />
-              <PitchSlider
-                value={this.state.pitchSliderValue}
-                changePitch={this.changePitch.bind(this, dispatch)}
-                note={this.state.note}
-              />
-              <ReverbSlider
-                value={this.state.reverb}
-                changeReverb={this.changeReverb}
-              />
-              <VolumeSlider
-                value={this.state.volume}
-                changeVolume={this.changeVolume}
-              />
+              <div className="slider-container">
+                <PitchSlider
+                  value={this.state.pitchSliderValue}
+                  changePitch={this.changePitch.bind(this, dispatch)}
+                  note={this.state.note}
+                />
+                <ReverbSlider
+                  value={this.state.reverb}
+                  changeReverb={this.changeReverb}
+                />
+                <VolumeSlider
+                  value={this.state.volume}
+                  changeVolume={this.changeVolume}
+                />
+              </div>
             </div>
           );
         }}

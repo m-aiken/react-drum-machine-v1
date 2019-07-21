@@ -18,11 +18,13 @@ function Sequencer(props) {
   return (
     <div className="sequencer">
       <div className="sequencer-row">
-        <div />
+        <div className="instrument-title" />
         <TimeBar index={props.index} />
-        <div className="slider-name">pitch</div>
-        <div className="slider-name">reVerb</div>
-        <div className="slider-name">VoluMe</div>
+        <div className="slider-container">
+          <div className="slider-name">pitch</div>
+          <div className="slider-name">reVerb</div>
+          <div className="slider-name">VoluMe</div>
+        </div>
       </div>
       <KickRow />
       <BoomRow />
