@@ -19,14 +19,16 @@
 
 .header {
   width: 100%;
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
 }
 
 .header h1 {
   margin: 0;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   justify-self: center;
+  align-self: center;
 }
 
 .master-vol-container {
@@ -44,14 +46,14 @@
 .transport {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   text-align: center;
   font-weight: bold;
 }
 
 .transport button {
-  margin: 0.3rem 1rem;
-  padding: 0.5rem 0;
+  margin: 0 0.8rem;
+  padding: 0.3rem 0;
   font-size: 0.6rem;
   font-weight: bold;
   border: none;
@@ -67,7 +69,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
+  font-size: 0.7rem;
 }
 
 .bpm-button {
@@ -75,54 +77,55 @@
   color: black;
 }
 
-@media (min-width: 650px) {
-  .header-and-transport {
-    height: 30%;
-  }
-
+@media (min-height: 400px) {
   .header-container {
     height: 40%;
   }
-
   .header h1 {
-    font-size: 3rem;
+    font-size: 1.6rem;
   }
 
   .transport-container {
     height: 60%;
-    width: 80%;
   }
 
-  .transport button {
+  .bpm-value {
     font-size: 0.8rem;
   }
 }
 
-@media (min-width: 850px) {
-  .header-container {
-    height: 50%;
+@media (min-height: 500px) {
+  .transport button {
+    margin: 0 0.2rem;
+  }
+}
+
+@media (min-width: 700px) and (min-height: 620px) {
+  .header-and-transport {
+    height: 30%;
   }
 
-  .transport-container {
-    height: 50%;
-  }
-
-  .transport {
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+  .header h1 {
+    font-size: 2.2rem;
   }
 
   .transport button {
     font-size: 1rem;
+    margin: 0 0.5rem;
+  }
+
+  .bpm-value {
+    font-size: 1rem;
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1000px) and (min-height: 900px) {
   .header-and-transport {
     height: 25%;
   }
 
   .header h1 {
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
 
   .master-vol-container {
@@ -152,6 +155,10 @@
 }
 
 @media (min-width: 1700px) {
+  .header h1 {
+    font-size: 3rem;
+  }
+
   .master-vol-container {
     font-size: 1rem;
   }
